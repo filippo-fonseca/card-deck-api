@@ -17,10 +17,10 @@ class CardDeckAPI {
     }
   }
 
-  async drawFromNewDeck(count: number) {
-    const drawCount = count;
+  async drawFromNewDeck(amount: number) {
+    const drawAmount = amount;
     try {
-      const response = await axios.get(`https://deckofcardsapi.com/api/deck/new/draw/?count=${drawCount.toString()}`);
+      const response = await axios.get(`https://deckofcardsapi.com/api/deck/new/draw/?count=${drawAmount.toString()}`);
       console.log(response.data);
       return response.data;
     } catch (error) {
