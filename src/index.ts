@@ -4,9 +4,23 @@ import axios from "axios";
  * A highly complex function that adds two numbers together.
  */
 class CardDeckAPI {
-  async shuffle() {
+  async shuffle(decks?: number) {
+    const deckCount = decks;
     try {
-      const response = await axios.get("https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1");
+      const response = await axios.get(
+        `https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=${deckCount?.toString()}`
+      );
+      console.log(response.data);
+      return response.data;
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  async drawFromNewDeck(count: number) {
+    const drawCount = count;
+    try {
+      const response = await axios.get(`https://deckofcardsapi.com/api/deck/new/draw/?count=${drawCount.toString()}`);
       console.log(response.data);
       return response.data;
     } catch (error) {
@@ -17,4 +31,4 @@ class CardDeckAPI {
 
 export const api = new CardDeckAPI();
 
-api.shuffle();
+api.drawFromNewDeck(8);
