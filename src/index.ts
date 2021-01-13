@@ -1,7 +1,7 @@
 import axios from "axios";
 
 /**
- * A highly complex function that adds two numbers together.
+ * An intuitive (unofficial) wrapper for the Deck of Cards API.
  */
 class CardDeckAPI {
   async shuffle(decks?: number) {
