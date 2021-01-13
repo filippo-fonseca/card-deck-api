@@ -1,8 +1,9 @@
 {
-  "name": "ts-npm-template",
+  "name": "card-deck-api",
+  "description": "A TypeScript wrapper (unofficial) for the Deck of Cards API.",
   "version": "1.0.0",
-  "repository": "https://github.com/alii/ts-npm-template",
-  "author": "Alistair Smith <alistairsmith01@gmail.com>",
+  "repository": "https://github.com/filippo-fonseca/card-deck-api",
+  "author": "Filippo Fonseca <filifonsecacagnazzo@gmail.com>",
   "license": "MIT",
   "scripts": {
     "test": "eslint . --fix&&jest",
@@ -30,6 +31,8 @@
     "printWidth": 120
   },
   "dependencies": {
-    "axios": "0.21.1"
+    "@types/node-fetch": "2.5.7",
+    "axios": "0.21.1",
+    "node-fetch": "2.6.1"
   }
 }
