@@ -14,6 +14,7 @@ class CardDeckAPI {
       return response.data;
     } catch (error) {
       console.error(error);
+      return error;
     }
   }
 
@@ -25,10 +26,22 @@ class CardDeckAPI {
       return response.data;
     } catch (error) {
       console.error(error);
+      return error;
+    }
+  }
+
+  async drawFromExistingDeck(deckID: string, drawAmount: number) {
+    const existingDeck = deckID;
+    const drawCount = drawAmount;
+    try {
+      const response = await axios.get(`https://deckofcardsapi.com/api/deck/${existingDeck}/draw/?count=${drawCount}`);
+      console.log(response.data);
+      return response.data;
+    } catch (error) {
+      console.error(error);
+      return error;
     }
   }
 }
 
 export const api = new CardDeckAPI();
-
-api.drawFromNewDeck(8);
