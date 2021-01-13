@@ -1,7 +1,7 @@
 import axios from "axios";
 
 /**
- * An intuitive (unofficial) wrapper for the Deck of Cards API.
+ * An intuitive (unofficial) TypeScript wrapper for the Deck of Cards API. https://deckofcardsapi.com/
  */
 class CardDeckAPI {
   async shuffle(decks?: number) {
