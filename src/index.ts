@@ -4,7 +4,7 @@ import axios from "axios";
  * An intuitive (unofficial) TypeScript wrapper for the Deck of Cards API. https://deckofcardsapi.com/
  */
 class CardDeckAPI {
-  async shuffle(decks?: number) {
+  async shuffle(decks: number) {
     const deckCount = decks;
     try {
       const response = await axios.get(
