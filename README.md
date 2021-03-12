@@ -2,6 +2,8 @@
 
 ♠️ Wrapper (unofficial) for the Deck of Cards API.
 
+Will be on NPM & Yarn soon.
+
 ## TypeScript
 
 `card-deck-api` is built in TypeScript, meaning it has type definitions and type safety out-of-the-box. Production-grade applications and high-level operations are possible as a result with our advanced TypeScript support.
